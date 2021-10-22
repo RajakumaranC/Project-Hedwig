@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "0fdb9574-b154-41ca-bde0-2cb8516f1bbb": {
+      "ProjectGuid": "0fdb9574-b154-41ca-bde0-2cb8516f1bbb",
+      "DisplayName": "Hedwig Api",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
