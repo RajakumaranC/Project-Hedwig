@@ -17,7 +17,7 @@ namespace TheGameBackend
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
@@ -28,10 +28,10 @@ namespace TheGameBackend
             });
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseCors(builder => builder.WithOrigins("http://localhost:4200").AllowCredentials().AllowAnyHeader().AllowAnyMethod());
+            
 
             if (env.IsDevelopment())
             {
@@ -40,20 +40,8 @@ namespace TheGameBackend
 
             app.UseHttpsRedirection();
 
-            app.UseDefaultFiles();
-            app.UseStaticFiles();
-
             app.UseRouting();
 
-            
-            
-            
-            /*{            //To overcome CORS issue
-                builder.WithOrigins("http://localhost:4200/");
-                builder.AllowAnyMethod();
-                builder.AllowAnyHeader();
-                builder.AllowCredentials();
-            });*/
 
             app.UseAuthorization();
 
